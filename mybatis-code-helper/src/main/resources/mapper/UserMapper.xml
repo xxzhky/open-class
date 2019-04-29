@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cc.dt.mch.demo.dao.UserMapper">
+    <!--auto generated Code-->
+    <resultMap id="BaseResultMap" type="cc.dt.mch.demo.pojo.User">
+        <result column="id" property="id" jdbcType="INTEGER"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+        <result column="gender" property="gender" jdbcType="CHAR"/>
+        <result column="age" property="age" jdbcType="INTEGER"/>
+        <result column="nation" property="nation" jdbcType="VARCHAR"/>
+        <result column="marital_status" property="maritalStatus" jdbcType="VARCHAR"/>
+        <result column="birth" property="birth" jdbcType="TIMESTAMP"/>
+        <result column="id_number" property="idNumber" jdbcType="VARCHAR"/>
+        <result column="education_background" property="educationBackground" jdbcType="VARCHAR"/>
+        <result column="university_degree" property="universityDegree" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--auto generated Code-->
+    <sql id="Base_Column_List">
+        id,
+        `password`,
+        gender,
+        age,
+        nation,
+        marital_status,
+        birth,
+        id_number,
+        education_background,
+        university_degree
+    </sql>
+
+    <!--auto generated Code-->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="user.maritalStatus">
+        INSERT INTO user (
+            id,
+            `password`,
+            gender,
+            age,
+            nation,
+            marital_status,
+            birth,
+            id_number,
+            education_background,
+            university_degree
+        ) VALUES (
+            #{user.id,jdbcType=INTEGER},
+            #{user.password,jdbcType=VARCHAR},
+            #{user.gender,jdbcType=CHAR},
+            #{user.age,jdbcType=INTEGER},
+            #{user.nation,jdbcType=VARCHAR},
+            #{user.maritalStatus,jdbcType=VARCHAR},
+            #{user.birth,jdbcType=TIMESTAMP},
+            #{user.idNumber,jdbcType=VARCHAR},
+            #{user.educationBackground,jdbcType=VARCHAR},
+            #{user.universityDegree,jdbcType=VARCHAR}
+        )
+    </insert>
+
+    <!--auto generated Code-->
+    <insert id="insertSelective" useGeneratedKeys="true" keyProperty="user.maritalStatus">
+        INSERT INTO user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="user.id!=null"> id,</if>
+            <if test="user.password!=null"> `password`,</if>
+            <if test="user.gender!=null"> gender,</if>
+            <if test="user.age!=null"> age,</if>
+            <if test="user.nation!=null"> nation,</if>
+            <if test="user.maritalStatus!=null"> marital_status,</if>
+            <if test="user.birth!=null"> birth,</if>
+            <if test="user.idNumber!=null"> id_number,</if>
+            <if test="user.educationBackground!=null"> education_background,</if>
+            <if test="user.universityDegree!=null"> university_degree,</if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="user.id!=null">#{user.id,jdbcType=INTEGER},
+            </if>
+            <if test="user.password!=null">#{user.password,jdbcType=VARCHAR},
+            </if>
+            <if test="user.gender!=null">#{user.gender,jdbcType=CHAR},
+            </if>
+            <if test="user.age!=null">#{user.age,jdbcType=INTEGER},
+            </if>
+            <if test="user.nation!=null">#{user.nation,jdbcType=VARCHAR},
+            </if>
+            <if test="user.maritalStatus!=null">#{user.maritalStatus,jdbcType=VARCHAR},
+            </if>
+            <if test="user.birth!=null">#{user.birth,jdbcType=TIMESTAMP},
+            </if>
+            <if test="user.idNumber!=null">#{user.idNumber,jdbcType=VARCHAR},
+            </if>
+            <if test="user.educationBackground!=null">#{user.educationBackground,jdbcType=VARCHAR},
+            </if>
+            <if test="user.universityDegree!=null">#{user.universityDegree,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <!--auto generated Code-->
+    <insert id="insertList">
+        INSERT INTO user (
+            id,
+            `password`,
+            gender,
+            age,
+            nation,
+            marital_status,
+            birth,
+            id_number,
+            education_background,
+            university_degree
+        )VALUES
+        <foreach collection="users" item="user" index="index" separator=",">
+            (
+            #{user.id,jdbcType=INTEGER},
+            #{user.password,jdbcType=VARCHAR},
+            #{user.gender,jdbcType=CHAR},
+            #{user.age,jdbcType=INTEGER},
+            #{user.nation,jdbcType=VARCHAR},
+            #{user.maritalStatus,jdbcType=VARCHAR},
+            #{user.birth,jdbcType=TIMESTAMP},
+            #{user.idNumber,jdbcType=VARCHAR},
+            #{user.educationBackground,jdbcType=VARCHAR},
+            #{user.universityDegree,jdbcType=VARCHAR}
+            )
+        </foreach>
+    </insert>
+
+    <!--auto generated Code-->
+    <update id="updateByPrimaryKeySelective">
+        UPDATE user
+        <set>
+            <if test="user.id != null"> id= #{user.id,jdbcType=INTEGER},</if>
+            <if test="user.password != null"> `password`= #{user.password,jdbcType=VARCHAR},</if>
+            <if test="user.gender != null"> gender= #{user.gender,jdbcType=CHAR},</if>
+            <if test="user.age != null"> age= #{user.age,jdbcType=INTEGER},</if>
+            <if test="user.nation != null"> nation= #{user.nation,jdbcType=VARCHAR},</if>
+            <if test="user.birth != null"> birth= #{user.birth,jdbcType=TIMESTAMP},</if>
+            <if test="user.idNumber != null"> id_number= #{user.idNumber,jdbcType=VARCHAR},</if>
+            <if test="user.educationBackground != null"> education_background= #{user.educationBackground,jdbcType=VARCHAR},</if>
+            <if test="user.universityDegree != null"> university_degree= #{user.universityDegree,jdbcType=VARCHAR}</if>
+        </set>
+        WHERE marital_status = #{user.maritalStatus,jdbcType=VARCHAR}
+    </update>
+
+    <!--auto generated by MybatisCodeHelper on 2019-04-11-->
+    <select id="findById" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from user
+        where id=#{id,jdbcType=INTEGER}
+    </select>
+
+<!--auto generated by MybatisCodeHelper on 2019-04-11-->
+    <select id="findByAge" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from user
+        where age=#{age,jdbcType=INTEGER}
+    </select>
+
+<!--auto generated by MybatisCodeHelper on 2019-04-11-->
+    <select id="findByAgeAndGender" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from user
+        where age=#{age,jdbcType=INTEGER} and gender=#{gender,jdbcType=CHAR}
+    </select>
+
+<!--auto generated by MybatisCodeHelper on 2019-04-11-->
+    <select id="findByNationLike" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from user
+        where nation like concat('%',#{likeNation,jdbcType=VARCHAR},'%')
+    </select>
+
+<!--auto generated by MybatisCodeHelper on 2019-04-11-->
+    <delete id="deleteAll">
+        delete
+        from user
+    </delete>
+
+<!--auto generated by MybatisCodeHelper on 2019-04-11-->
+    <update id="updateEducationBackground">
+        update user
+        set education_background=#{updatedEducationBackground,jdbcType=VARCHAR}
+    </update>
+
+<!--auto generated by MybatisCodeHelper on 2019-04-11-->
+    <select id="getAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from user
+    </select>
+
+<!--auto generated by MybatisCodeHelper on 2019-04-12-->
+    <select id="findByidNumber" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from user
+        where id_number=#{idNumber,jdbcType=VARCHAR}
+    </select>
+</mapper>
+

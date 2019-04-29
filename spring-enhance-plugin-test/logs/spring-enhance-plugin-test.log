@@ -1,0 +1,18 @@
+2019-04-06 16:16:37.723  INFO 9764 --- [main] c.d.o.t.controller.UserControllerTest    : Starting UserControllerTest on thinkpad-pc with PID 9764 (started by RID in E:\DevSoft\COURSE_sourcecode\open-class\spring-enhance-plugin-test)
+2019-04-06 16:16:37.747 DEBUG 9764 --- [main] c.d.o.t.controller.UserControllerTest    : Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+2019-04-06 16:16:37.748  INFO 9764 --- [main] c.d.o.t.controller.UserControllerTest    : The following profiles are active: dev
+2019-04-06 16:16:42.062  INFO 9764 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-06 16:16:42.731  INFO 9764 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-04-06 16:16:42.733  INFO 9764 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-04-06 16:16:42.772  INFO 9764 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 39 ms
+2019-04-06 16:16:42.865  INFO 9764 --- [main] c.d.o.t.controller.UserControllerTest    : Started UserControllerTest in 6.95 seconds (JVM running for 9.869)
+2019-04-06 16:16:43.208  INFO 9764 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-06 16:28:17.770  INFO 5580 --- [main] c.d.o.t.controller.UserControllerTest    : Starting UserControllerTest on thinkpad-pc with PID 5580 (started by RID in E:\DevSoft\COURSE_sourcecode\open-class\spring-enhance-plugin-test)
+2019-04-06 16:28:17.770 DEBUG 5580 --- [main] c.d.o.t.controller.UserControllerTest    : Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+2019-04-06 16:28:17.770  INFO 5580 --- [main] c.d.o.t.controller.UserControllerTest    : The following profiles are active: dev
+2019-04-06 16:28:21.314  INFO 5580 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-06 16:28:21.873  INFO 5580 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-04-06 16:28:21.873  INFO 5580 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-04-06 16:28:21.920  INFO 5580 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 47 ms
+2019-04-06 16:28:21.998  INFO 5580 --- [main] c.d.o.t.controller.UserControllerTest    : Started UserControllerTest in 5.97 seconds (JVM running for 11.271)
+2019-04-06 16:28:22.342  INFO 5580 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
