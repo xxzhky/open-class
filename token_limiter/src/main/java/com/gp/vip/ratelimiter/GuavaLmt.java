@@ -20,6 +20,7 @@ public class GuavaLmt {
 
     }
     public static void main(String[] args) {
+        //一秒内并发访问20
         final CountDownLatch latch= new CountDownLatch(20);
         GuavaLmt lmt= new GuavaLmt();
         final Random random= new Random(10);
