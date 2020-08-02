@@ -13,6 +13,7 @@
         <module>mybatis-code-helper</module>
         <module>submit-repeat-interceptor</module>
         <module>spi</module>
+        <module>observer</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
