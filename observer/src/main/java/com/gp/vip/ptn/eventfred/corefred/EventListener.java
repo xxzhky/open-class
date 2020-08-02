@@ -4,15 +4,15 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class EventListener {
-    protected Map<String, Event> events = new HashMap<>();
+    protected Map<String, Event> events = new ConcurrentHashMap<>();
 
     public void addListener(String eventType, Object target){
         try {
-            this.addListener(eventType,
-                    target,
-                    target.getClass().getMethod("on"+ toUpperFirstCase(eventType), Event.class));
+            this.addListener(eventType, target
+                    , target.getClass().getMethod("on"+ toUpperFirstCase(eventType), Event.class));
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }
