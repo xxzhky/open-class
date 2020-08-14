@@ -11,6 +11,11 @@
         <module>spring-enhance-plugin-test</module>
         <module>spring-enhance-demo</module>
         <module>mybatis-code-helper</module>
+        <module>submit-repeat-interceptor</module>
+        <module>spi</module>
+        <module>observer</module>
+        <module>springmvc</module>
+        <module>algorithm</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.gp.vip.ptn.event.core.Event</OriginalElement>
+  <nodes>
+    <node x="348.0" y="409.0">com.gp.vip.ptn.event.mouseevent.MouseEventCallback</node>
+    <node x="178.0" y="409.0">com.gp.vip.ptn.event.core.EventLisenter</node>
+    <node x="0.25" y="206.0">com.gp.vip.ptn.observer.Teacher</node>
+    <node x="20.25" y="0.0">com.gp.vip.ptn.observer.Question</node>
+    <node x="0.0" y="409.0">com.gp.vip.ptn.event.mouseevent.MouseEventType</node>
+    <node x="187.64999999999998" y="305.0">com.gp.vip.ptn.event.core.Event</node>
+    <node x="0.0" y="102.0">com.gp.vip.ptn.observer.GPer</node>
+    <node x="113.435" y="511.0">com.gp.vip.ptn.event.mouseevent.Mouse</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.gp.vip.ptn.event.core.EventLisenter" target="com.gp.vip.ptn.event.core.Event">
+      <point x="56.25" y="-26.0" />
+      <point x="309.25" y="384.0" />
+      <point x="324.84999999999997" y="384.0" />
+      <point x="39.19999999999999" y="27.0" />
+    </edge>
+    <edge source="com.gp.vip.ptn.observer.Teacher" target="com.gp.vip.ptn.observer.GPer">
+      <point x="-37.75" y="-27.0" />
+      <point x="38.0" y="181.0" />
+      <point x="47.0" y="181.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="com.gp.vip.ptn.event.mouseevent.Mouse" target="com.gp.vip.ptn.event.core.EventLisenter">
+      <point x="21.75" y="-26.0" />
+      <point x="178.685" y="486.0" />
+      <point x="253.0" y="486.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="com.gp.vip.ptn.observer.Teacher" target="com.gp.vip.ptn.observer.Question">
+      <point x="37.75" y="-27.0" />
+      <point x="113.5" y="181.0" />
+      <point x="104.5" y="181.0" />
+      <point x="27.75" y="26.0" />
+    </edge>
+    <edge source="com.gp.vip.ptn.event.mouseevent.Mouse" target="com.gp.vip.ptn.event.mouseevent.MouseEventType">
+      <point x="-21.75" y="-26.0" />
+      <point x="135.185" y="486.0" />
+      <point x="79.0" y="486.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="com.gp.vip.ptn.observer.GPer" target="com.gp.vip.ptn.observer.Question">
+      <point x="0.0" y="-27.0" />
+      <point x="-27.75" y="26.0" />
+    </edge>
+    <edge source="com.gp.vip.ptn.event.mouseevent.MouseEventCallback" target="com.gp.vip.ptn.event.core.Event">
+      <point x="0.0" y="-26.0" />
+      <point x="442.5" y="384.0" />
+      <point x="364.04999999999995" y="384.0" />
+      <point x="78.39999999999998" y="27.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="268.49999999999994" y="281.5" />
+  <SelectedNodes>
+    <node>com.gp.vip.ptn.event.core.EventLisenter</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
