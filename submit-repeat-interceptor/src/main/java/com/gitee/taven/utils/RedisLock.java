@@ -5,6 +5,7 @@ import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import redis.clients.jedis.Jedis;
+import redis.clients.jedis.params.SetParams;
 
 import java.util.Collections;
 
@@ -42,7 +43,13 @@ public class RedisLock {
     public boolean tryLock(String lockKey, String clientId, long seconds) {
         return redisTemplate.execute((RedisCallback<Boolean>) redisConnection -> {
             Jedis jedis = (Jedis) redisConnection.getNativeConnection();
-            String result = jedis.set(lockKey, clientId, SET_IF_NOT_EXIST, SET_WITH_EXPIRE_TIME, seconds);
+            //升级至jedis 3.0
+            SetParams params= new SetParams();
+            params
+                    .nx()
+                    .ex((int) seconds);
+            String result = jedis.set(lockKey, clientId, params);
+            //String result = jedis.set(lockKey, clientId, SET_IF_NOT_EXIST, SET_WITH_EXPIRE_TIME, seconds);
             if (LOCK_SUCCESS.equals(result)) {
                 return true;
             }
