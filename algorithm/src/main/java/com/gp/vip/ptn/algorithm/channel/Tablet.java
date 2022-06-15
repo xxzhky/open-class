@@ -18,7 +18,8 @@ class Tablet implements Persistable {
 
     private String brand;
     private boolean isCellular;
-    private long cost; // in US Dollars
+    // in US Dollars
+    private long cost;
 
     public Tablet() {
         brand = "";
