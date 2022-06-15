@@ -1,4 +1,4 @@
-package com.gp.vip.ptn.algorithm.common;
+package com.gp.vip.ptn.algorithm.forkjoin;
 
 
 import org.springframework.util.StopWatch;
